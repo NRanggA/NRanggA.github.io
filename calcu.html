@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .calculator {
+        border: 2px solid black;
+        padding: 50px;
+        border-radius: 10px;
+      }
+      input[type="text"] {
+        width: 92%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h1 style="text-align: center">CALCULATOR</h1>
+      <input type="text" id="result" />
+      <br />
+      <button style="background-color: #ffbb00" onclick="clearResult()">
+        C
+      </button>
+      <button onclick="appendToResult('+')">+</button>
+      <button onclick="appendToResult('-')">-</button>
+      <button onclick="appendToResult('*')">*</button>
+      <button onclick="appendToResult('/')">/</button>
+      <button onclick="calculateSqrt()">√x</button>
+      <br /><br />
+      <button onclick="calculateCos()">Cos</button>
+      <button onclick="calculateSin()">Sin</button>
+      <button onclick="calculateLog()">Log</button>
+      <button onclick="calculateResult()">=</button>
+    </div>
+    <script src="calcu.js"></script>
+  </body>
+</html>
